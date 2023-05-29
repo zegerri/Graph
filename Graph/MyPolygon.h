@@ -37,7 +37,9 @@ public:
         painter.rotate(angle);   // 旋转坐标系，旋转角度为angle
         painter.scale(scale, scale);   // 缩放坐标系，缩放比例为scale
         painter.translate(-rotatePoint);   // 平移坐标系，使旋转中心回到原来的位置
+
         painter.drawPolygon(*this);   // 绘制多边形
+
         painter.translate(rotatePoint);   // 平移坐标系，使旋转中心为rotatePoint
         painter.scale(1 / scale, 1 / scale);   // 缩放坐标系，缩放比例为1/scale
         painter.rotate(-angle);   // 旋转坐标系，旋转角度为-angle

@@ -1,4 +1,9 @@
 #pragma once
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <iomanip>
 #include<QPoint>
 #include<QPainter>
 #include<QAction>
@@ -10,6 +15,7 @@
 #include<QMenuBar>
 #include<QColorDialog>
 #include<QMouseEvent>
+#include <QString>
 #include<QResizeEvent>
 #include<QDeBug>
 #define PI 3.14159265

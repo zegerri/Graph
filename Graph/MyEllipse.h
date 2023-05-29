@@ -1,5 +1,5 @@
 #pragma once // 防止头文件重复包含
-#include "Head.h" // 引用其他头文件
+#include "Head.h" 
 
 class MyEllipse : public QRect // MyEllipse 类继承自 QRect 类
 {

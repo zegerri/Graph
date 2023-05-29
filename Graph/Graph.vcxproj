@@ -83,6 +83,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="judge.cpp" />
+    <ClCompile Include="shapefile.cpp" />
     <QtRcc Include="Graph.qrc" />
     <QtUic Include="Graph.ui" />
     <QtMoc Include="Graph.h" />
@@ -91,11 +93,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Head.h" />
+    <ClInclude Include="judge.h" />
     <ClInclude Include="MyEllipse.h" />
     <ClInclude Include="MyLine.h" />
     <ClInclude Include="MyPoint.h" />
     <ClInclude Include="MyPolygon.h" />
+    <ClInclude Include="MyRectangle.h" />
     <ClInclude Include="MySector.h" />
+    <ClInclude Include="shapefile.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
