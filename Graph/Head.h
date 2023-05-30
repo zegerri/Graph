@@ -1,9 +1,11 @@
 #pragma once
+
 #include <string>
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <iomanip>
+
 #include<QPoint>
 #include<QPainter>
 #include<QAction>
@@ -18,6 +20,8 @@
 #include <QString>
 #include<QResizeEvent>
 #include<QDeBug>
+
+#define MAX_CHAR_LEN 100
 #define PI 3.14159265
 #define POINT 0
 #define LINE 1

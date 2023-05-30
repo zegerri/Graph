@@ -84,6 +84,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="judge.cpp" />
+    <ClCompile Include="Shape.cpp" />
     <ClCompile Include="shapefile.cpp" />
     <QtRcc Include="Graph.qrc" />
     <QtUic Include="Graph.ui" />
@@ -100,6 +101,7 @@
     <ClInclude Include="MyPolygon.h" />
     <ClInclude Include="MyRectangle.h" />
     <ClInclude Include="MySector.h" />
+    <ClInclude Include="Shape.h" />
     <ClInclude Include="shapefile.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
