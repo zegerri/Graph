@@ -7,7 +7,7 @@
 #include"MySector.h"
 #include"MyRectangle.h"
 
-class judge
+class Judge
 {
 public:
     int fileModel=1;   //文件模式 1 - 3
@@ -32,7 +32,7 @@ public:
     QVector <int> _sltPolygon; 
     QVector <int> _sltEllipse; 
     QVector < int> _sltPoint;
-    judge()
+    Judge()
     {
         _pointItems.push_back(QVector<MyPoint>{});
         _lineItems.push_back(QVector<MyLine>{});
