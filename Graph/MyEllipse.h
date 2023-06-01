@@ -1,7 +1,7 @@
 #pragma once // 防止头文件重复包含
 #include "Head.h" 
 
-class MyEllipse : public QRect // MyEllipse 类继承自 QRect 类
+class MyEllipse : public QRect,public Shape // MyEllipse 类继承自 QRect 类
 {
 public:
 	MyEllipse() {}; // 默认构造函数

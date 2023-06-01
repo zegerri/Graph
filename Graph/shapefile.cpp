@@ -89,7 +89,7 @@ int load(QString name)
             list[i].points[j] = QPointF(x * 500, y * 500);
         }
     }
-    Control::clear();
+    Judge::clear();
     for (int i = 0; i < list.size(); i++) {
         QString t = list[i].type;
         Shape* shape = NULL;
@@ -97,16 +97,16 @@ int load(QString name)
             shape = new MyPoint();
         }
         else  if (t == "折线") {
-            shape = new MyrokenLine();
+            shape = new MyLine();
         }
         else  if (t == "多边形") {
-            shape = new MyPolygonal();
+            shape = new MyPolygon();
         }
         else  if (t == "矩形") {
-            shape = new MyRect();
+            shape = new MyRectangle();
         }
         else  if (t == "圆") {
-            shape = new MyCircle();
+            shape = new MyEllipse();
         }
         else  if (t == "弧") {
             shape = new MyArc();
@@ -114,7 +114,7 @@ int load(QString name)
         if (shape == NULL)
             continue;
         shape->info = list[i];
-        Control::shape_list.push_back(shape);
+        Judge::shape_list.push_back(shape);
     }
 
 }

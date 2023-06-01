@@ -1,5 +1,5 @@
 #include"Head.h"
-class MyRectangle :public QRect
+class MyRectangle :public QRect, public Shape
 {
 public:
 	MyRectangle() {};

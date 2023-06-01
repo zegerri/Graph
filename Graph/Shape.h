@@ -2,6 +2,43 @@
 #include "Head.h" 
 #include"judge.h"
 
+class Judge
+{
+public:
+    int fileModel = 1;   //文件模式 1 - 3
+    int model = 1;       //1创建  2选择
+    int lineSize = 1;
+    int fontSize = 1;
+    int r = 180 * 16;
+    QColor _penColor = Qt::black;
+    QColor _brushColor = Qt::white;    //绘制属性
+    QString shapeName = "矩形";       //当前的图形
+
+    //数据部分
+    QVector < QVector<MyPoint>>_pointItems;//点
+    QVector<QVector<MyLine>> _lineItems;//线
+    QVector < QVector<MyRectangle> >_rectItems;//矩形
+    QVector < QVector<MyPolygon>> _polygonItems;//多边形
+    QVector < QVector< MySector>>_sectorItems;//扇形
+    QVector < QVector<MyEllipse>>_ellipseItems;//圆
+    QVector<QPoint>__p;
+    QVector<int> _sltLine;
+    QVector <int> _sltRect;
+    QVector <int> _sltPolygon;
+    QVector <int> _sltEllipse;
+    QVector < int> _sltPoint;
+    Judge()
+    {
+        _pointItems.push_back(QVector<MyPoint>{});
+        _lineItems.push_back(QVector<MyLine>{});
+        _rectItems.push_back(QVector<MyRectangle>{});
+        _polygonItems.push_back(QVector<MyPolygon>{});
+        _sectorItems.push_back(QVector<MySector>{});
+        _ellipseItems.push_back(QVector<MyEllipse>{});
+    }
+
+};
+
 class Info {
 
 public:
@@ -9,7 +46,7 @@ public:
     char name[MAX_CHAR_LEN];       //这个图形的id
     char type[MAX_CHAR_LEN];       //图形类型
     char context[MAX_CHAR_LEN];       //图形包含的字符串
-    QVector<QPointF> points;    //对应点的列表
+    QVector<QPoint> points;    //对应点的列表
     int len;            //点的数量
     int font_size;      //里面的文字大小
     int line_size;      //里面的文字大小
@@ -36,7 +73,8 @@ public:
     Info info;
 public:
     virtual ~Shape() {};
-    virtual void draw(QPainter& board) = 0;
+    void paintEvent(QPaintEvent*);//重写画画事件
+    Judge judge;
     void setAtta(Judge&judge, QString type)
     {
         this->info.len = judge.__p.size();
@@ -52,12 +90,12 @@ public:
             this->info.len = 4;
             this->info.points.clear();
             this->info.points.push_back(judge.__p[0]);
-            this->info.points.push_back(QPointF(judge.points[0].x(), judge.points[1].y()));
-            this->info.points.push_back(judge.points[1]);
-            this->info.points.push_back(QPointF(judge.points[1].x(), judge.points[0].y()));
+            this->info.points.push_back(QPoint(judge.__p[0].x(), judge.__p[1].y()));
+            this->info.points.push_back(judge.__p[1]);
+            this->info.points.push_back(QPoint(judge.__p[1].x(), judge.__p[0].y()));
         }
         if (type == "弧") {
-            this->info.points.push_back(QPointF());
+            this->info.points.push_back(QPoint());
             this->info.points[2].setX(judge.r / -2);
             this->info.points[2].setY(judge.r);
             this->info.len = 3;
@@ -72,5 +110,7 @@ public:
             output << D.info.points[i].x() << " " << D.info.points[i].y() << "\n";
         return output;
     }
+    private:
+      QPoint _offset;
 };
 

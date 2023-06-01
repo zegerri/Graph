@@ -1,6 +1,6 @@
 #pragma once
 #include"Head.h"
-class MyPoint :public QPoint
+class MyPoint :public QPoint, public Shape
 {
 public:
 	MyPoint(QPoint p, QPen pe, QBrush b) :QPoint(p) { pen = pe; brush = b; };

@@ -2,7 +2,7 @@
 #define SHAPEFILE_H
 #pragma once
 #include"Head.h"
-
+#include "Shape.h"
 using std::string;
 using std::vector;
 using std::ostringstream;
@@ -51,7 +51,7 @@ public:
             Info t;
             strcpy(t.type, "’€œﬂ");
             for (int i = 0; i < geom[0].size(); i++) {
-                t.points.push_back(QPointF(geom[0][i].x, geom[0][i].y));
+                t.points.push_back(QPoint(geom[0][i].x, geom[0][i].y));
             }
             t.len = t.points.size();
             if (t.points.size() >= 2)
@@ -96,7 +96,7 @@ public:
             Info t;
             strcpy(t.type, "∂‡±ﬂ–Œ");
             for (int j = 0; j < geom[i].size(); j++) {
-                t.points.push_back(QPointF(geom[i][j].x, geom[i][j].y));
+                t.points.push_back(QPoint(geom[i][j].x, geom[i][j].y));
             }
             t.len = t.points.size();
             if (t.points.size() > 2)

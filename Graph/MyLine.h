@@ -2,7 +2,7 @@
 #include"Head.h"
 
 // MyLine类，继承自QLine类，表示二维平面上的一条线段
-class MyLine :public QLine
+class MyLine :public QLine, public Shape
 {
 public:
     MyLine() {};   // 默认构造函数

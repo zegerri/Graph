@@ -2,7 +2,7 @@
 #include"Head.h"
 
 // MyPolygon类，继承自QPolygon类，表示二维平面上的一个多边形
-class MyPolygon :public QPolygon
+class MyPolygon :public QPolygon, public Shape
 {
 public:
     MyPolygon() {};   // 默认构造函数

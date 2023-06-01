@@ -1,6 +1,6 @@
 #pragma once
 #include"Head.h"
-class MySector
+class MySector: public Shape
 {
 public:
 	MySector(QPoint p_, double angle_, double r1_, double r2_) { p = p_; angle = angle_; }
