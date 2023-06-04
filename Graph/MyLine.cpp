@@ -15,24 +15,24 @@ double MyLine::compute_length(int pos)
     return result;
 }
 
-void MyLine::Draw(QPainter& painter, QPoint& ep)
-{
-    if (!m_lines.empty())
-        for (auto p = m_lines.begin(); p != m_lines.end(); p++)
-        {
-            for (auto pp = p->begin(); pp != (p->end() - 1); pp++)
-            {
-                if (pp->point == ep)
-                    continue;
-                if (pp != (p->end() - 1) && (pp + 1)->point != ep)
-                {
-                    painter.setPen(QPen(pp->penColor, pp->width));
-                    //painter.setBrush(pp->fillColor);
-                    painter.drawLine(pp->point, (pp + 1)->point);
-                }
-            }
-        }
-}
+//void MyLine::Draw(QPainter& painter, QPoint& ep)
+//{
+//    if (!m_lines.empty())
+//        for (auto p = m_lines.begin(); p != m_lines.end(); p++)
+//        {
+//            for (auto pp = p->begin(); pp != (p->end() - 1); pp++)
+//            {
+//                if (pp->point == ep)
+//                    continue;
+//                if (pp != (p->end() - 1) && (pp + 1)->point != ep)
+//                {
+//                    painter.setPen(QPen(pp->penColor, pp->width));
+//                    painter.setBrush(pp->fillColor);
+//                    painter.drawLine(pp->point, (pp + 1)->point);
+//                }
+//            }
+//        }
+//}
 
 void MyLine::Show_Point(QPainter& painter)
 {
@@ -58,7 +58,7 @@ void MyLine::set_param(int pos, int x, int y, int width, QColor color)
 
         p->point = QPoint(p->point.x() + difference_x, p->point.y() + difference_y);
         p->width = width;
-        p->fillColor = color;
+        //p->fillColor = color;
         p->penColor = color;
     }
 }
@@ -80,7 +80,7 @@ int MyLine::find(QPainter& painter, QPoint& mouse_pos, QPoint& last_point, int& 
             {
                 //先画表示以选中的点
                 painter.setPen(Qt::red);
-                painter.setBrush(Qt::red);
+                //painter.setBrush(Qt::red);
                 painter.drawEllipse(pp->point, 3, 3);
                 //判断该点的位置头部、尾部、中间
                 if (pp->point == p->begin()->point)
@@ -104,7 +104,7 @@ int MyLine::find(QPainter& painter, QPoint& mouse_pos, QPoint& last_point, int& 
             else
             {
                 painter.setPen(Qt::black);
-                painter.setBrush(Qt::black);
+                //painter.setBrush(Qt::black);
                 painter.drawEllipse(pp->point, 3, 3);
                 last_point = QPoint();
             }
