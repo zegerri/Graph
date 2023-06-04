@@ -1,9 +1,11 @@
 #include"Head.h"
-class MyRectangle :public QRect, public Shape
+#include"Shape.h"
+#include<QRect>
+class MyLineRectangle :public QRect
 {
 public:
-	MyRectangle() {};
-	MyRectangle(QRect r, QPen p, QBrush b) :QRect(r) { pen = p; brush = b; };
+	//MyRectangle() {};
+	//MyRectangle(QRect r, QPen p, QBrush b) :QRect(r) { pen = p; brush = b; };
 	double area() { return width() * height(); }
 	double length() { return height() * 2 + width() * 2; }
 	void draw(QPainter& painter) {

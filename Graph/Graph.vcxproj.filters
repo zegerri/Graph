@@ -43,18 +43,24 @@
     <ClCompile Include="shapefile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="judge.cpp">
+    <ClCompile Include="MyPoint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Shape.cpp">
+    <ClCompile Include="ShapeSet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyLine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyPolygon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyLineRect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Head.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MyPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MyLine.h">
@@ -75,11 +81,23 @@
     <ClInclude Include="MyRectangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MyPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShapeSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="judge.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Shape.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MyLineRect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>

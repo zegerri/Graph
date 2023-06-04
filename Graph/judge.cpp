@@ -1,5 +1,14 @@
 #include "judge.h"
 
+//Judge::Judge()
+//{
+//    _pointItems.push_back(QVector<MyPoint>{});
+//    _lineItems.push_back(QVector<MyLine>{});
+//    _rectItems.push_back(QVector<MyRectangle>{});
+//    _polygonItems.push_back(QVector<MyPolygon>{});
+//    _sectorItems.push_back(QVector<MySector>{});
+//    _ellipseItems.push_back(QVector<MyEllipse>{});
+//}
 
 //int judge::fileModel = 1;
 //int judge::model = 1;

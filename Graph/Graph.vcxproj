@@ -83,9 +83,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="judge.cpp" />
-    <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="MyLine.cpp" />
+    <ClCompile Include="MyLineRect.cpp" />
+    <ClCompile Include="MyPoint.cpp" />
+    <ClCompile Include="MyPolygon.cpp" />
     <ClCompile Include="shapefile.cpp" />
+    <ClCompile Include="ShapeSet.cpp" />
     <QtRcc Include="Graph.qrc" />
     <QtUic Include="Graph.ui" />
     <QtMoc Include="Graph.h" />
@@ -97,12 +100,17 @@
     <ClInclude Include="judge.h" />
     <ClInclude Include="MyEllipse.h" />
     <ClInclude Include="MyLine.h" />
+    <ClInclude Include="MyLineRect.h" />
     <ClInclude Include="MyPoint.h" />
     <ClInclude Include="MyPolygon.h" />
     <ClInclude Include="MyRectangle.h" />
     <ClInclude Include="MySector.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="shapefile.h" />
+    <ClInclude Include="ShapeSet.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

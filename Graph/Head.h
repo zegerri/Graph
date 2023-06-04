@@ -19,9 +19,10 @@
 #include<QMouseEvent>
 #include <QString>
 #include<QResizeEvent>
+#include <QtCore/qfile.h>
 #include<QDeBug>
 
-#define MAX_CHAR_LEN 100
+#define LAST_POS 9999
 #define PI 3.14159265
 #define POINT 0
 #define LINE 1
