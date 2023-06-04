@@ -35,6 +35,23 @@ void MyPolygon::Draw(QPainter& painter, QPoint& ep)
 		}
 }
 
+void MyPolygon::set_param(int pos, int x, int y, int width, QColor color)
+{
+	//计算增量
+	int difference_x = x - m_lines.at(pos).begin()->point.x();
+	int difference_y = y - m_lines.at(pos).begin()->point.y();
+
+	//修改值作用于每个点
+	for (auto p = m_lines.at(pos).begin(); p < m_lines.at(pos).end(); p++)
+	{
+
+		p->point = QPoint(p->point.x() + difference_x, p->point.y() + difference_y);
+		p->width = width;
+		p->fillColor = color;
+		p->penColor = color;
+	}
+}
+
 double MyPolygon::compute_length(int pos)
 {
 	double result = 0.0;

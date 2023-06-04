@@ -15,7 +15,7 @@ public:
 	double compute_Area(int pos);
 	//查找临近点
 	int find(QPainter& painter, QPoint& mouse_pos, QPoint& last_pos, int& index_i, int& index_j, std::vector<nPoint>& tem_points) override;
-
+	void set_param(int pos, int x, int y, int width, QColor color)override;
 public:
 	//保存
 	bool write(QFile&) const;	//纯虚函数
