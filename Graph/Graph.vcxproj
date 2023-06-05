@@ -84,7 +84,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="MyLine.cpp" />
+    <ClCompile Include="MyLineEllipse.cpp" />
     <ClCompile Include="MyLineRect.cpp" />
+    <ClCompile Include="MyLineSector.cpp" />
     <ClCompile Include="MyPoint.cpp" />
     <ClCompile Include="MyPolygon.cpp" />
     <ClCompile Include="shapefile.cpp" />
@@ -100,7 +102,9 @@
     <ClInclude Include="judge.h" />
     <ClInclude Include="MyEllipse.h" />
     <ClInclude Include="MyLine.h" />
+    <ClInclude Include="MyLineEllipse.h" />
     <ClInclude Include="MyLineRect.h" />
+    <ClInclude Include="MyLineSector.h" />
     <ClInclude Include="MyPoint.h" />
     <ClInclude Include="MyPolygon.h" />
     <ClInclude Include="MyRectangle.h" />
