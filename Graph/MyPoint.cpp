@@ -13,19 +13,19 @@ void MyPoint::Add(nPoint& np)
 {
     m_points.push_back(np);//将新的点添加到 m_points 数组中
 }
-
-void MyPoint::Draw(QPainter& painter, QPoint& ep)
-{
-    if (!m_points.empty())//如果 m_points 数组不为空，则绘制所有的点
-        for (auto p = m_points.begin(); p != m_points.end(); p++)
-        {
-            if (ep == p->point)//如果当前点的位置等于上一个点的位置，则跳过这个点
-                continue;
-            painter.setPen(QPen(p->penColor, p->width));//设置画笔颜色和宽度
-            painter.setBrush(p->fillColor);//设置画刷颜色
-            painter.drawEllipse(p->point, 3, 3);//绘制一个小圆圈
-        }
-}
+//
+//void MyPoint::Draw(QPainter& painter, QPoint& ep)
+//{
+//    if (!m_points.empty())//如果 m_points 数组不为空，则绘制所有的点
+//        for (auto p = m_points.begin(); p != m_points.end(); p++)
+//        {
+//            if (ep == p->point)//如果当前点的位置等于上一个点的位置，则跳过这个点
+//                continue;
+//            painter.setPen(QPen(p->penColor, p->width));//设置画笔颜色和宽度
+//            painter.setBrush(p->fillColor);//设置画刷颜色
+//            painter.drawEllipse(p->point, 3, 3);//绘制一个小圆圈
+//        }
+//}
 
 void MyPoint::Move(int index, int index_jj, QPoint& np)
 {

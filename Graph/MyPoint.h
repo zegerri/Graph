@@ -21,9 +21,9 @@ public:
 	//点数目
 	int size() { return m_points.size(); }
 	//绘制
-	void Draw(QPainter & painter, QPoint&) override;
+	//void Draw(QPainter & painter, QPoint&) override;
 	//显示所有点
-	void Show_Point(QPainter & painter) override { QPoint t_p(-1, -1); Draw(painter, t_p); };
+	void Show_Point(QPainter & painter) override { QPoint t_p(-1, -1); };
 	//移动
 	void Move(int index_i, int index_j, QPoint & np) override;
 	//修改参数

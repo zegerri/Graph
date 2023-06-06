@@ -6,34 +6,34 @@ double comput_vector(int x1, int y1, int x2, int y2)
 	return (x1 * y2 - y1 * x2);
 }
 
-void MyPolygon::Draw(QPainter& painter, QPoint& ep)
-{
-	if (!m_lines.empty()) // 判断 MyPolygon 是否有线段
-		for (auto p = m_lines.begin(); p != m_lines.end(); p++) // 遍历 MyPolygon 的每个线段
-		{
-			for (auto pp = p->begin(); pp != p->end(); pp++) // 遍历每个线段的每个点
-			{
-				if (ep == pp->point) // 当前点与终点相同则继续循环
-					continue;
-
-				if ((pp->point == p->rbegin()->point)) // 当前点为线段的最后一个点
-				{
-					if ((p->begin()->point != ep)) // 判断线段的第一个点与终点是否相同
-					{
-						painter.setPen(QPen(pp->penColor, pp->width));
-						painter.setBrush(pp->fillColor);
-						painter.drawLine(pp->point, p->begin()->point); // 绘制线段的最后一个点与第一个点之间的连线
-					}
-				}
-				else if ((pp + 1)->point != ep) // 当前点不是线段的最后一个点
-				{
-					painter.setPen(QPen(pp->penColor, pp->width));
-					painter.setBrush(pp->fillColor);
-					painter.drawLine(pp->point, (pp + 1)->point); // 绘制当前点与下一个点之间的连线
-				}
-			}
-		}
-}
+//void MyPolygon::Draw(QPainter& painter, QPoint& ep)
+//{
+//	if (!m_lines.empty()) // 判断 MyPolygon 是否有线段
+//		for (auto p = m_lines.begin(); p != m_lines.end(); p++) // 遍历 MyPolygon 的每个线段
+//		{
+//			for (auto pp = p->begin(); pp != p->end(); pp++) // 遍历每个线段的每个点
+//			{
+//				if (ep == pp->point) // 当前点与终点相同则继续循环
+//					continue;
+//
+//				if ((pp->point == p->rbegin()->point)) // 当前点为线段的最后一个点
+//				{
+//					if ((p->begin()->point != ep)) // 判断线段的第一个点与终点是否相同
+//					{
+//						painter.setPen(QPen(pp->penColor, pp->width));
+//						painter.setBrush(pp->fillColor);
+//						painter.drawLine(pp->point, p->begin()->point); // 绘制线段的最后一个点与第一个点之间的连线
+//					}
+//				}
+//				else if ((pp + 1)->point != ep) // 当前点不是线段的最后一个点
+//				{
+//					painter.setPen(QPen(pp->penColor, pp->width));
+//					painter.setBrush(pp->fillColor);
+//					painter.drawLine(pp->point, (pp + 1)->point); // 绘制当前点与下一个点之间的连线
+//				}
+//			}
+//		}
+//}
 
 void MyPolygon::set_param(int pos, int x, int y, int width, QColor color)
 {

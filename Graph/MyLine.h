@@ -22,7 +22,7 @@ public:
     //线数目
     int size() { return m_lines.size(); }
     //绘制
-    void Draw(QPainter& painter, QPoint&) override;
+    //void Draw(QPainter& painter, QPoint&) override;
     //显示所有点
     void Show_Point(QPainter& painter) override;
     //移动

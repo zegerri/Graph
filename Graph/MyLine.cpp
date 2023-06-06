@@ -41,6 +41,7 @@ void MyLine::Show_Point(QPainter& painter)
             painter.drawEllipse(pp->point, 3, 3);
 }
 
+
 void MyLine::Move(int index, int index_j, QPoint& np)
 {
     m_lines.at(index).at(index_j).point = np;

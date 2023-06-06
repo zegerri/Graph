@@ -8,7 +8,8 @@ class MyPolygon : public MyLine
 public:
 
 	//重写绘制
-	void Draw(QPainter& painter, QPoint&) override;
+	/*void Draw(QPainter& painter, QPoint&) override;*/
+
 	//计算长度
 	double compute_length(int pos);
 	//计算面积

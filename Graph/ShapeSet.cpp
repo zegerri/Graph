@@ -9,8 +9,10 @@ ShapeSet::ShapeSet()
 	// 创建点、线、多边形对象并添加到 ShapeSet 中
 	MyPoint* m_p = new MyPoint();
 	m_lstShape.push_back(m_p);
+
 	MyLine* m_l = new MyLine();
 	m_lstShape.push_back(m_l);
+
 	MyPolygon* m_polygon = new MyPolygon();
 	m_lstShape.push_back(m_polygon);
 }
@@ -100,15 +102,15 @@ void ShapeSet::New(QString& filename)
 	Clear();
 	m_filename = filename;
 }
-
-void ShapeSet::Draw(QPainter& painter, QPoint& ep) const
-{
-	// 绘制 ShapeSet 中的所有图形
-	for (auto p = m_lstShape.begin(); p != m_lstShape.end(); p++)
-	{
-		(*p)->Draw(painter, ep);
-	}
-}
+//
+//void ShapeSet::Draw(QPainter& painter, QPoint& ep) const
+//{
+//	// 绘制 ShapeSet 中的所有图形
+//	for (auto p = m_lstShape.begin(); p != m_lstShape.end(); p++)
+//	{
+//		(*p)->Draw(painter, ep);
+//	}
+//}
 
 void ShapeSet::Draw_Point(QPainter& painter) const
 {
@@ -119,7 +121,7 @@ void ShapeSet::Draw_Point(QPainter& painter) const
 	}
 
 }
-//
+
 //bool ShapeSet::Save()
 //{
 //	// 将 ShapeSet 中的所有图形保存到文件中

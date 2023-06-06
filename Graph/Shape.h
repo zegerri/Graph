@@ -32,7 +32,7 @@ public:
 	//清空
 	virtual void Clear() = 0;
 	//绘制向量
-	virtual void Draw(QPainter&, QPoint&) = 0;
+	//virtual void Draw(QPainter&, QPoint&) = 0;
 	//显示所有点
 	virtual void Show_Point(QPainter&) = 0;
 	//移动点位置

@@ -4,7 +4,6 @@
 #include"MyLine.h"
 #include"MyPoint.h"
 #include"MyPolygon.h"
-#include"MySector.h"
 #include"MyRectangle.h"
 
 class Judge

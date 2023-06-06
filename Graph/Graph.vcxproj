@@ -83,14 +83,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MyCurve.cpp" />
     <ClCompile Include="MyLine.cpp" />
     <ClCompile Include="MyLineEllipse.cpp" />
     <ClCompile Include="MyLineRect.cpp" />
     <ClCompile Include="MyLineSector.cpp" />
     <ClCompile Include="MyPoint.cpp" />
+    <ClCompile Include="MyPolyEllipse.cpp" />
     <ClCompile Include="MyPolygon.cpp" />
+    <ClCompile Include="MyPolyRect.cpp" />
+    <ClCompile Include="MyPolySector.cpp" />
     <ClCompile Include="shapefile.cpp" />
     <ClCompile Include="ShapeSet.cpp" />
+    <ClCompile Include="源.cpp" />
     <QtRcc Include="Graph.qrc" />
     <QtUic Include="Graph.ui" />
     <QtMoc Include="Graph.h" />
@@ -100,15 +105,18 @@
   <ItemGroup>
     <ClInclude Include="Head.h" />
     <ClInclude Include="judge.h" />
+    <ClInclude Include="MyCurve.h" />
     <ClInclude Include="MyEllipse.h" />
     <ClInclude Include="MyLine.h" />
     <ClInclude Include="MyLineEllipse.h" />
     <ClInclude Include="MyLineRect.h" />
     <ClInclude Include="MyLineSector.h" />
     <ClInclude Include="MyPoint.h" />
+    <ClInclude Include="MyPolyEllipse.h" />
     <ClInclude Include="MyPolygon.h" />
+    <ClInclude Include="MyPolyRect.h" />
+    <ClInclude Include="MyPolySector.h" />
     <ClInclude Include="MyRectangle.h" />
-    <ClInclude Include="MySector.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="shapefile.h" />
     <ClInclude Include="ShapeSet.h" />
